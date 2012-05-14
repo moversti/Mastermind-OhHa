@@ -1,0 +1,56 @@
+Mastermind
+Käyttäjä arvailee tietokoneen arpomaa neljän pituista koodia. Koodissa voi olla neljää väriä (valkoinen, musta, keltainen, sininen, punainen, vihreä). Pelaajalla on kymmenen arvausyritystä. Kone antaa palautetta arvauksen hyvyydestä seuraavasti: musta pallura oikeasta väristä oikeassa kohdassa, valkoinen pallura oikeasta väristä väärässä kohdassa. Pelaaja voittaa jos arvaa koodin oikein, toisaalta kone voittaa jos ei. Peli tallettaa peleistä tilastoa jossa on tiedot seuraavalle: pelien määrä, voittojen määrä 1 yrityksellä, voitto 2 yrityksellä, ... ja voitto 10 yrityksellä.
+
+enum Vari
+	nappulan värit
+	VALKOINEN, MUSTA, VIHREÄ, SININEN, KELTAINEN, PUNAINEN
+
+class Rivi
+	neljän pituionen lista värejä. käytetään pelaajan arvauksiin ja ratkaisukoodiin
+	Vari[] varit
+	Rivi(Vari[] varit)
+	Rivi getVarit()
+
+class Logiikka
+	int ratkaisuyritykset
+	arvoRatkaisu()
+	antaa arvauksen hyvyyspisteet: musta pallura = 10, valkoinen pallura = 1
+	int arvaa(Rivi arvaus)
+	boolean peliOhi
+
+class Mastermind
+	main käynnistää käyttöliittymän
+
+interface Ui
+	kysyy arvauksen ja näyttää edelliset arvaukset ja palautteen arvauksista
+
+
+class ClUi implements Ui
+	näyttää tältä:
+
+1234	VV
+3456	MMV
+6542	VVVV
+----	----
+----	----
+----	----
+----	----
+----	----
+----	----
+----	----
+Arvaa: 6354
+
+jne.
+
+edelliset arvaukset printataan aina uudestaan ennen uutta arvauksen kyselyä
+
+
+class Gui implements Ui
+	edelliset arvaukset allekkain samanlailla kuin tekstiversiossa, mutta
+	tietenkin värillisillä palluroilla. pelaaja antaa arvauksensa valitsemalla
+	neljästä buttongroupista kustakin yhden värillisen JButtonin tai vastaavan ja painaa JButtonia "arvaa" yms
+
+class arvausListener implements ActionListener
+	kun pelaaja painaa arvaa, antaa logiikalle valitun arvauksen ja tyhjentää arvauskentän
+
+
