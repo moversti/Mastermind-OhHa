@@ -17,6 +17,7 @@ class Logiikka
 	antaa arvauksen hyvyyspisteet: musta pallura = 10, valkoinen pallura = 1
 	int arvaa(Rivi arvaus)
 	boolean peliOhi
+	setRatkaisu() testausta varten
 
 class Mastermind
 	main käynnistää käyttöliittymän
