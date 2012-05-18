@@ -12,7 +12,7 @@ import mastermind.*;
  * @author moversti
  */
 public class Logiikkatest {
-    
+    private Logiikka l;
     public Logiikkatest() {
     }
 
@@ -27,7 +27,7 @@ public class Logiikkatest {
     @Before
     public void setUp() {
         Vari[] ratkaisu = {Vari.KELTAINEN,Vari.PUNAINEN,Vari.SININEN,Vari.VIHREA};
-        Logiikka l = new Logiikka();
+        l = new Logiikka();
         l.setRatkaisu(new Rivi(ratkaisu));
     }
     

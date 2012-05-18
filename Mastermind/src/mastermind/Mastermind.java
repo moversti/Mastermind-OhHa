@@ -1,19 +1,20 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Mastermind klassisilla säänöillä: 10 vastausyritystä, 6 väriä, 4 pituinen
+ * koodi, saman värin käyttö useasti sallittu.
  */
 package mastermind;
 
 /**
+ * Main luokka.
  *
- * @author moversti
+ * @author Mikko Översti
  */
 public class Mastermind {
 
     /**
-     * @param args the command line arguments
+     * @param args Komentoriviargumentit. (Eivät tee mitään).
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO
     }
 }
